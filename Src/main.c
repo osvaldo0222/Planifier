@@ -99,7 +99,7 @@ int main(void)
   MX_ETH_Init();
   MX_USART3_UART_Init();
   MX_USB_OTG_FS_PCD_Init();
-  SysTick_Config(SystemCoreClock * 0.001);
+  SysTick_Config(SystemCoreClock * 0.1);
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */

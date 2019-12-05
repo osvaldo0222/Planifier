@@ -16,7 +16,7 @@ typedef struct {
 	int user_registers[8]; //r4-r11
 }Procces;
 
-typedef int sem_t;
+typedef uint32_t sem_t;
 int* stack_pointer;
 int fork();
 void sem_wait(sem_t* semaphore);
