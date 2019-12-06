@@ -65,6 +65,7 @@ static void MX_USB_OTG_FS_PCD_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+sem_t mutex;
 
 /* USER CODE END 0 */
 
@@ -107,7 +108,6 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   int child;
-  sem_t mutex;
   sem_init(&mutex, 1);
   int i;
    while (1) {

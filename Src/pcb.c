@@ -23,6 +23,9 @@ void sem_init(sem_t* semaphore, uint32_t value){
 }
 
 void sem_wait(sem_t* semaphore) {
+	while(*semaphore <= 0) {
+		continue;
+	}
 	asm("MOV r3, #3;SVC 0;");
 }
 
@@ -42,7 +45,6 @@ void SVC_Handler(void) {
 		case 1:
 			users_proccess++;
 			proccess[users_proccess].id = users_proccess;
-			register int p1 asm("r0");
 			__asm("TST lr, #4");
 			__asm("MRS r0, MSP;");
 			stack_pointer = (int*)p1;
@@ -69,11 +71,6 @@ void SVC_Handler(void) {
 		case 3:
 			users_proccess++;
 			aux = (sem_t*)p1;
-			__asm("nop");
-			while(*aux <= 0) {
-				continue;
-			}
-			__asm("nop");
 			*aux = *aux - 1;
 			users_proccess--;
 			break;

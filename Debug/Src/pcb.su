@@ -1,6 +1,6 @@
 pcb.c:16:5:fork	4	static,ignoring_inline_asm
 pcb.c:21:6:sem_init	16	static,ignoring_inline_asm
 pcb.c:25:6:sem_wait	16	static,ignoring_inline_asm
-pcb.c:29:6:sem_post	16	static,ignoring_inline_asm
-pcb.c:36:6:SVC_Handler	16	static,ignoring_inline_asm
-pcb.c:96:6:SysTick_Handler	16	static,ignoring_inline_asm
+pcb.c:32:6:sem_post	16	static,ignoring_inline_asm
+pcb.c:39:6:SVC_Handler	16	static,ignoring_inline_asm
+pcb.c:93:6:SysTick_Handler	16	static,ignoring_inline_asm

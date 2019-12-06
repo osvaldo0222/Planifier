@@ -1,6 +1,6 @@
 core_cm7.h:2024:22:__NVIC_SetPriority	16	static
 core_cm7.h:2564:26:SysTick_Config	16	static
-main.c:75:5:main	24	static
+main.c:76:5:main	16	static
 main.c:143:6:SystemClock_Config	232	static
 main.c:203:13:MX_ETH_Init	16	static
 main.c:248:13:MX_USART3_UART_Init	8	static
